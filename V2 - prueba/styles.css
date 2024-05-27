@@ -1,0 +1,595 @@
+:root {
+    --just-white: #fff;
+    --color-secon: yellow;
+    --text-main: 'Reddit Mono', monospace;
+    --text-sans: 'DM Sans', sans-serif;
+    --text-elite: 'Special Elite', system-ui;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%; 
+    overflow-x: hidden;
+} 
+/* HEADER */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(250deg, black 16.69%, gray 100%);
+   z-index: 1;
+}
+.image-container-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 200px;
+    height: 100%;   
+}
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 5px;
+}
+.menu {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    list-style: none; 
+   
+}
+.menu > li {
+    position: relative;
+    padding: 0 15px;
+    
+}
+.menu > li > a.list {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--text-sans);
+    color: white;
+    text-decoration-line: none;
+}
+.menu > li > a.img > img {
+    width: 35px;
+    height: 35px;
+}
+.menu > li > a.list:hover {
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu > li > a.img:hover > img {
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* 2DO MENU */
+.menu > li > ul {
+    position: absolute;
+    display: none;
+    list-style: none;   
+}
+.menu > li > ul  > li {
+    position: relative;
+    margin-top: 15px;
+}
+.menu > li > ul  > li > a {  
+    font-size: 1.5rem;
+    font-family: var(--text-sans);
+    color: var(--just-white);
+    font-weight: bold;  
+    text-decoration: none;
+}
+.menu > li:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
+.menu > li > ul  > li  > a:hover {  
+    background-color: red;
+    opacity: 0.5;  
+}
+/* CELULAR */ 
+.open-menu {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+/*SLOGAN*/
+.slogan {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 255px;
+    top: 100px; 
+}
+.slogan p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    top: 40px;
+    font-size: 7rem;
+    font-family: var(--text-elite);
+    font-weight: bold;
+    color: var(--color-secon);
+    
+}
+.slogan h4 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: var(--text-elite);
+    color: var(--color-secon);
+    top: 110px;
+}
+/* SECCION MAIN */
+.main-services {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    top: 50px;
+}
+.main-services .products-container--main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main-services .products-container--main .image-container--main {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 3px;
+    width: 30%;
+}
+.image-container--main img {
+    width: 80%;
+    height: 250px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(216, 188, 112, 0.16);
+}
+.image-container--main img:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+.main-services .products-container--main .text-container--main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 70%;
+    height: 100%;
+}
+.main-services .products-container--main .text-container--main .text {
+    position: absolute;
+    background-color: red;
+    width: 180px;
+    color: var(--just-white);
+    font-weight: bold;
+    font-size: 1.7rem;
+    font-family: var(--text-main);
+}
+.main-services .products-container--main .text-container--main p {
+    position: absolute;
+    display: flex;
+    text-align: start;
+    color: var(--just-white);
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-family: var(--text-main);
+    width: 100%;
+    top: 45px;
+    
+}
+.main-services .products-container--main .text-container--main h2 {
+    position: absolute;
+    display: flex;
+    text-align: start;
+    color: var(--just-white);
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-family: var(--text-main);
+    top: 80px;
+    width: 100%;
+}
+.main-services .products-container--main .text-container--main ul {
+    position: absolute;
+    font-size: 1.3rem;
+    font-family: var(--text-main);
+    font-weight: 500;
+    line-height: 2.3rem;
+    color: var(--just-white);
+    top: 110px;
+    list-style: none;
+}
+.main-services .products-container--main .text-container--main h3 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: var(--text-main);
+    font-weight: 500;
+    color: var(--just-white);
+    top: 200px;
+    width: 100%;   
+}
+.main-services .products-container--main .text-container--main h4 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: var(--text-main);
+    font-weight: 500;
+    color: var(--just-white);
+    top: 220px;
+    width: 100%;
+}
+.main-services .products-container--main .text-container--main h5 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: var(--text-main);
+    font-weight: 500;
+    color: var(--color-secon);
+    top: 253px;
+    width: 100%;
+}
+.product-container--services {
+    position: relative;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 350px;
+    top: 50px;
+}
+.product-container--services .services-information {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+}
+.product-container--services .services-information .image-container--services {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 3px;
+    width: 30%;
+    height: 280px;
+}
+.product-container--services .services-information .image-container--services img {
+    width: 80%;
+    height: 250px;
+    padding: 5px;
+    margin-top: 35px;
+    box-shadow: 0 4px 8px rgba(216, 188, 112, 0.16);
+}
+.product-container--services .services-information .image-container--services  img:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+.product-container--services .services-information .product-container--cards {
+    position: relative;
+    margin: 10px;
+    width: 70%;
+    height: 350px;
+}
+.product-container--cards .text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 180px;
+    height: 20px;
+    color: var(--just-white);
+    font-weight: bold;
+    font-size: 1.7rem;
+    font-family: var(--text-main);
+}
+.product-container--cards h3 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 205px;
+    height: 10px;
+    color: var(--color-secon);
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: var(--text-main);
+    top: 35px;
+}
+.product-container--cards h4 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 205px;
+    height: 20px;
+    color: var(--color-secon);
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: var(--text-main);
+    top: 55px;
+}
+.product-container--cards ul {
+    position: absolute;
+    font-size: 1.3rem;
+    font-family: var(--text-main);
+    font-weight: 500;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    top: 90px;
+    list-style: none;
+}
+.product-container--cards ul li span {
+color: red;
+}
+.combos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    top: 50px;
+}
+.combos .text-ppal--combos {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    top: 10px;
+    width: 150px;
+    height: 20px;
+    color: var(--just-white);
+    font-weight: bold;
+    font-size: 1.7rem;
+    font-family: var(--text-main);
+}
+.combos .combos-detail--card {
+    background-color: rgb(1, 5, 19);
+    padding: 10px;
+    width: 400px;
+}
+.combos .combos-detail--card img {
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(43, 14, 109, 0.5);
+}
+.combos .combos-detail--card .combo--card-title {
+    margin-top: 10px;
+    color: var(--color-secon);
+    font-size: 1.2rem;
+    font-family: var(--text-elite);
+}
+.combos .combos-detail--card ul {
+    color: var(--color-secon);
+    font-size: 1rem;
+    font-family: var(--text-elite);
+    margin: 10px;
+}
+.combos .combos-detail--card ul li {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+/* FOOTER */
+.footer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(250deg, black 16.69%, gray 100%);
+}
+.footer-container .contact-information {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    margin: 25px;
+}
+.footer-container .contact-information p {
+    position: relative;
+    display: flex;
+    margin-left: 65px;
+    color: var(--just-white);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.6rem;    
+}
+.footer-container .contact-information p img {
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-left: -30px;
+}
+.footer-container .social-icons {
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+.footer-container .social-icons ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+.footer-container .social-icons ul li {
+    position: relative;
+    color: var(--just-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.footer-container .social-icons ul li a img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: -15px;
+    left: -50px;
+}
+
+@media (max-width: 640px) {
+    .image-container-header {
+        padding-left: 15px;
+        width: 140px;
+        height: 75px;
+    }
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 3rem;
+        background-color: transparent;
+        color: var(--just-white);
+        cursor: pointer;  
+        z-index: 1;     
+    }
+    .open-menu {
+        margin-right: 30px;
+    }
+    .close-menu {
+        margin: 10px;
+    }
+    .menu-container {
+       opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        right: 0;
+        bottom: 0;  
+        z-index: 100;
+    }
+    .menu-container.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: black;
+        width: 170px;
+        height: 270px;
+        top: 0px;
+        right: 0;
+    }
+    .menu > li{
+        top: 50px;
+        margin: 5px;
+        padding: 5px;
+    }
+    .menu > li > a.list {
+        font-family: var(--text-sans);
+        font-size: 1.5rem;
+}   
+.menu > li > ul {
+        left: 80px;
+        top: -10px;
+}
+.main-services {
+    height: 300px;
+}
+.image-container--main{
+    height: 300px;
+}
+.image-container--main img {
+    height: 150px
+}
+.text-container--main p {
+    font-size: 1rem !important;
+    top: 25px !important; 
+}
+.text-container--main h2 {
+    font-size: 1rem !important;
+    top: 75px !important;
+}
+.text-container--main ul {
+    font-size: 1rem !important;
+    top: 115px !important; 
+    line-height: 1.5rem !important;
+}
+.text-container--main h3 {
+    font-size: 1.2rem !important;
+    top: 192px !important;
+}
+.text-container--main h4 {
+    font-size: 1.2rem !important;
+    top: 220px !important;
+}
+.text-container--main h5 {
+    font-size: 1.7rem !important;
+    top: 265px !important;
+}
+.product-container--services .services-information .image-container--services img {
+    margin-top: 65px;
+    width: 84px;
+    height: 160px;
+}  
+.product-container--cards ul {
+    font-size: 1rem;    
+    line-height: 1.5rem;
+}
+.combos .text-ppal--combos {
+    top: 35px;
+}
+.combos .combos-detail--card img {
+    height: 150px;
+}
+.footer-container .contact-information p {
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+.footer-container .social-icons ul li {
+    font-size: 1.2rem;
+}
+.footer-container .social-icons ul li a img {
+    width: 30px;
+    height: 30px;
+    bottom: -8px;
+    left: -30px;
+}
+}
